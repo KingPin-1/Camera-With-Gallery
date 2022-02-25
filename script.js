@@ -52,9 +52,24 @@ recordBtnContainer.addEventListener("click" , (e) =>{
     }
 })
 
+captureBtnContainer.addEventListener("click" , (e) => {
+    let canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    let tool = canvas.getContext("2d")
+    tool.drawImage(video , 0 , 0 , canvas.width , canvas.height );
+    let imageURL = canvas.toDataURL();
+    let a = document.createElement("a");
+        a.href = imageURL;
+        a.download = "image.jpg";
+        a.click();
+
+})
+
 let timerID;
 let counter = 0; // represents total seconds
 let timer = document.querySelector(".timer")
+
 function startTimer(){
     timer.style.display = "block";
     function displayTimer(){
@@ -76,6 +91,7 @@ function startTimer(){
     }
     timerID = setInterval(displayTimer, 1000);
 }
+
 function stopTimer(){
     timer.style.display = "none";
     clearInterval(timerID);
