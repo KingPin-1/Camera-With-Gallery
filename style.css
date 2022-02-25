@@ -79,3 +79,15 @@ video{
         transform: scale(1.1);
     }
 }
+
+.timer-container{
+    position: absolute;
+    color: aqua;
+    font-size: 0.8rem;
+    bottom: 10rem;
+    left: 5rem;
+}
+
+.timer{
+    display: none;
+}
