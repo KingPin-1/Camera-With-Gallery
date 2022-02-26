@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url("./wall.jpg");
+    background-size:    contain   ;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,7 +16,6 @@ body{
     width: 7rem;
     height: 3rem;
     border-radius: 1rem ;
-    background-color: black;
     color: white;
     display: flex;
     justify-content: center;
@@ -24,17 +25,19 @@ body{
 
 .back:hover{
     transform: scale(1.1);
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 
 .gallery-container{
-    border: 5rem solid white;
+    border: 5rem solid transparent;
+    /* border-image: url("./wall.jpg") 30 round ; */
     min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: white ;
+    /* background-color: white ; */
+    /* background-image: url("./background.jpg"); */
 }
 
 .media-container{
@@ -79,7 +82,8 @@ body{
     align-items: center;
 }
 .heading{   
-    background-color: bisque;
+    background-size: contain;
+    background-color: transparent;
     position: fixed;
     width: 100vw;
     height: 5rem;
@@ -88,9 +92,39 @@ body{
     align-items: center;
     font-family: 'Brush Script MT', cursive;
     font-size: xx-large;
-    text-shadow: 5px 5px 10px #00FF00;
+    /* text-shadow: 5px 5px 10px #00FF00; */
+    /* color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa; */
     z-index: 5;
 }
+
+h1{
+    animation: flicker 1.5s infinite alternate;  
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+  }
 
 .type{
     position: absolute;
