@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.back{
+    position: fixed;
+    right: 6rem;
+    bottom: 6rem;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 1rem ;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back:hover{
+    transform: scale(1.1);
+    background-color: lightgray;
+}

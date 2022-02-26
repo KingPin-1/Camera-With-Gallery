@@ -155,7 +155,11 @@ video{
 
 .gallery{
     position: absolute ;
-    right: 6rem;
+    right: 7rem;
     bottom: 7rem;
+}
+
+.gallery:hover{
+    transform: scale(2);
     cursor: pointer;
 }
