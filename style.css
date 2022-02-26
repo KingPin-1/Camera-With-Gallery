@@ -113,6 +113,12 @@ video{
     background-blend-mode: color-burn;
 }
 
+.filter:hover{
+    transform: scale(1.1);
+    border: 2px solid green;
+    cursor: pointer;
+}
+
 .orange{
     background-color: #ffff0047;
 }
