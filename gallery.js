@@ -26,5 +26,34 @@ setTimeout(()=>{
                 galleryContainer.appendChild(mediaElem);
             });
         }
+
+        //IMAGES
+
+        let dbImageTransaction = db.transaction("image","readonly");
+        let imageStore = dbImageTransaction.objectStore("image");
+        let imageRequest = imageStore.getAll(); //Event Driven ... triggers the next line
+        imageRequest.onsuccess = (e) => { 
+            let galleryContainer = document.querySelector(".gallery-container");
+            let imageResult = imageRequest.result;
+            imageResult.forEach(imageObj => {   
+                let mediaElem = document.createElement("div");
+                mediaElem.setAttribute("class" , "media-container");
+                mediaElem.setAttribute("id" , imageObj.id);
+
+                let url = imageObj.url;
+
+                mediaElem.innerHTML = `
+                    <div class="media">
+                        <img src="${url}" alt="${imageObj.id}" />
+                    </div>
+                    <div class="download action-btn">DONWLOAD</div>
+                    <div class="delete action-btn">DELETE</div>
+                `;
+
+                galleryContainer.appendChild(mediaElem);
+            });
+        }
+
+
     }
 } , 100)

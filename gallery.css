@@ -44,7 +44,7 @@ body{
 
 .media{
     height: calc( 100% - 4rem );
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .media > * {
