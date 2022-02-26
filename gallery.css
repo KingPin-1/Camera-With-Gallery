@@ -4,6 +4,8 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 .back{
     position: absolute;
@@ -26,7 +28,8 @@ body{
 }
 
 .gallery-container{
-    height: 100vh;
+    border: 5rem solid white;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
