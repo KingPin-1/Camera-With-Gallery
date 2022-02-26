@@ -1,5 +1,5 @@
 let db;
-let openRequest = indexedDB.open("myDataBase" , 3);
+let openRequest = indexedDB.open("myDataBase");
 
 openRequest.addEventListener("success" , (e) => {
     console.log("DB Success");

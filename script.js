@@ -4,7 +4,7 @@ let captureBtnContainer = document.querySelector(".capture-btn-container");
 let recordBtn = document.querySelector(".record-btn");
 let captureBtn = document.querySelector(".capture-btn");  
 let recordFlag = false;
-
+let transparentColor = "transparent";
 let chunks = [];
 
 let constraints = {
@@ -66,6 +66,7 @@ recordBtnContainer.addEventListener("click" , (e) =>{
 })
 
 captureBtnContainer.addEventListener("click" , (e) => {
+    captureBtn.classList.toggle("scale-capture");
     let canvas = document.createElement("canvas");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;

@@ -6,10 +6,10 @@ body{
     padding: 0;
 }
 .back{
-    position: fixed;
-    right: 6rem;
-    bottom: 6rem;
-    width: 5rem;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    width: 7rem;
     height: 3rem;
     border-radius: 1rem ;
     background-color: black;
@@ -26,21 +26,27 @@ body{
 }
 
 .gallery-container{
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: lightcyan;
+    background-color: white ;
 }
 
 .media-container{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     height: 15rem;
     width: 15rem;
     border: 2px solid white ;
     background-color: lightgreen ;
     margin: 2rem;
 }
+
+.media-container:hover{
+    transform: scale(1.05);
+}
+
 
 .media{
     height: calc( 100% - 4rem );
@@ -51,6 +57,7 @@ body{
     height: 100%;
     width: 100%;
     object-fit: fill;
+    cursor: pointer;
 }
 
 .download{
@@ -67,4 +74,29 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.heading{   
+    background-color: bisque;
+    position: fixed;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: xx-large;
+    text-shadow: 5px 5px 10px #00FF00;
+    z-index: 5;
+}
+
+.type{
+    position: absolute;
+    width: 2rem;
+    text-align: center;
+    margin: 5px;
+    border-radius: 20%;
+    background-color: black;
+    color: white;
+    font-size: small ;
+    /* z-index: 3   ; */
 }
