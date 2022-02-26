@@ -8,14 +8,24 @@
     <title>Gallery</title>
 </head>
 <body>
-    <h1>GALLERY</h1>
-    <div class="back">BACK</div>
 
+    <div class="back">BACK</div>
+    <div class="gallery-container">
+        <div class="media-container">
+            <div class="media"></div>
+            <div class="download action-btn">DONWLOAD</div>
+            <div class="delete action-btn">DELETE</div>
+        </div>
+    </div>
+
+    <script src="./db.js"></script>
+    
     <script>
         let backBtn = document.querySelector(".back");
         backBtn.addEventListener("click" , (e) => {
             location.assign("./index.html");
         })
     </script>
+
 </body>
 </html>

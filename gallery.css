@@ -24,3 +24,41 @@ body{
     transform: scale(1.1);
     background-color: lightgray;
 }
+
+.gallery-container{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightcyan;
+}
+
+.media-container{
+    height: 15rem;
+    width: 15rem;
+    border: 2px solid white ;
+    background-color: lightgreen ;
+    margin: 2rem;
+}
+
+.media{
+    height: calc( 100% - 4rem );
+    background-color: blue;
+}
+
+.download{
+    background-color: black;
+}
+
+.delete{
+    background-color: red;
+}
+
+.action-btn{
+    height: 2rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
