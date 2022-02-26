@@ -43,6 +43,7 @@ video{
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .capture-btn{
@@ -50,6 +51,7 @@ video{
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 .scale-record{
     animation-name: scale-record;
@@ -69,7 +71,7 @@ video{
 .scale-capture{
     animation-name: scale-capture;
     animation-iteration-count: 1;
-    animation-duration: 1s;
+    animation-duration: 300ms;
 }
 
 @keyframes scale-capture {
@@ -143,4 +145,17 @@ video{
     width: 100vw;
     /* background-color: #ffc0cba6; */
     z-index: 1;
+}
+
+.material-icons{
+    color: white;
+    transform: scale(1.4);
+    z-index: 2;
+}
+
+.gallery{
+    position: absolute ;
+    right: 6rem;
+    bottom: 7rem;
+    cursor: pointer;
 }
